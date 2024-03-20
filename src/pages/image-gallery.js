@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
-const IndexPage = ({ data }) => {
+const GalleryPage = ({ data }) => {
   return (
     <div>
       <h1>Picture Gallery</h1>
@@ -29,4 +29,4 @@ export const query = graphql`
   }
 `;
 
-export default IndexPage;
+export default GalleryPage;
