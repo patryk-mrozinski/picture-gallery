@@ -1,0 +1,29 @@
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.image-wrapper {
+  overflow: hidden;
+  box-shadow: 0 2px 4px #0000001a;
+  width: 70%;
+  margin-bottom: 48px;
+}
+
+.image-wrapper:nth-child(odd) {
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+.image-wrapper:nth-child(even) {
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+  align-self: end;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
