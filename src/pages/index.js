@@ -1,14 +1,17 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-// import * as styles from "../styles/gallery.module.css"
 
 const IndexPage = ({ data }) => {
   return (
     <div>
-      <h1>Picture Gallery</h1>
-      <div className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        <Link to="/images-page">More pictures</Link>
+      <div className="flex justify-between h-10 my-6">
+        <h1>
+          <b>Picture Gallery</b>
+        </h1>
+        <div className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+          <Link to="/images-page">More pictures</Link>
+        </div>
       </div>
       <div className="flex flex-col items-start">
         {data.allFile.nodes.map(node => (
