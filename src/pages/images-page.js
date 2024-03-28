@@ -1,16 +1,18 @@
 import React from "react"
-import { graphql } from "gatsby"
-import ImageTail from '../components/image-tail';
-import * as styles from './tails.module.css';
+import { graphql, Link } from "gatsby"
+import ImageTail from "../components/image-tail"
 
-const ImagesPage = (props) => {
-  
+const ImagesPage = props => {
   const claudinaryImages = props.data.allCloudinaryMedia.nodes
-  console.log({claudinaryImages})
+  console.log({ claudinaryImages })
 
   return (
-    <div className={styles.tailContainer}>
-      {claudinaryImages.map((media, index) => <ImageTail key={index} media={media} />)}
+    <div>
+      <div className="flex flex-wrap my-32">
+        {claudinaryImages.map((media, index) => (
+          <ImageTail key={index} media={media} />
+        ))}
+      </div>
     </div>
   )
 }
@@ -23,6 +25,6 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 
-export default ImagesPage;
+export default ImagesPage
