@@ -11,7 +11,7 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
-const path = require('path')
+const path = require("path")
 
 module.exports = {
   siteMetadata: {
@@ -37,8 +37,8 @@ module.exports = {
         cloudName: process.env.CLOUDINARY_CLOUD_NAME,
         apiKey: process.env.CLOUDINARY_API_KEY,
         apiSecret: process.env.CLOUDINARY_API_SECRET,
-        prefix: `fotki`
-      }
+        prefix: `fotki`,
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -52,6 +52,13 @@ module.exports = {
         // theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/icons/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-theme-tailwindcss`,
+      options: {
+        postCssPlugins: [require("autoprefixer")],
       },
     },
   ],
