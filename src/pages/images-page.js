@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import ImageTail from "../components/image-tail"
+import ImageGallery from "../components/image-gallery"
 
 const ImagesPage = props => {
   const claudinaryImages = props.data.allCloudinaryMedia.nodes
@@ -14,9 +14,7 @@ const ImagesPage = props => {
         Go back to main page
       </Link>
       <div className="flex flex-wrap my-10">
-        {claudinaryImages.map((media, index) => (
-          <ImageTail key={index} media={media} />
-        ))}
+        <ImageGallery images={claudinaryImages} />
       </div>
     </div>
   )
