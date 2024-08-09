@@ -1,5 +1,13 @@
-import * as React from "react"
-import { PhotoProvider, PhotoView } from "react-photo-view"
+import React, { Component, useEffect } from "react"
+import LightGallery from "lightgallery/react"
+
+import "lightgallery/css/lightgallery.css"
+import "lightgallery/css/lg-zoom.css"
+import "lightgallery/css/lg-thumbnail.css"
+
+// Import plugins if needed
+import lgZoom from "lightgallery/plugins/zoom"
+import lgThumbnail from "lightgallery/plugins/thumbnail"
 
 import "react-photo-view/dist/react-photo-view.css"
 
@@ -7,19 +15,16 @@ const ImageGallery = props => {
   const images = props.images
 
   return (
-    <PhotoProvider maskOpacity={0.5}>
-      {images.map((item, index) => (
-        <div className="flex flex-shrink-0 flex-grow-0 w-1/3 items-center justify-around my-10">
-          <PhotoView key={index} src={item.secure_url}>
-            <img
-              className="w-5/6 cursor-pointer"
-              src={item.secure_url}
-              alt=""
-            />
-          </PhotoView>
-        </div>
+    <LightGallery plugins={[lgZoom, lgThumbnail]} speed={500} thumbnail={true}>
+      {images.map((image, index) => (
+        <a href={image.secure_url} key={index} className="image-preview-link">
+          <img
+            className="object-cover w-full h-full cursor-pointer"
+            src={image.secure_url}
+          />
+        </a>
       ))}
-    </PhotoProvider>
+    </LightGallery>
   )
 }
 
