@@ -18,8 +18,7 @@
     "lightgallery": "^2.7.2",
     "postcss": "^8.4.38",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-photo-view": "^1.2.4"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "prettier": "^2.8.8"
