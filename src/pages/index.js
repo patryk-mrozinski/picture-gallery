@@ -23,6 +23,7 @@ const IndexPage = ({ data }) => {
         </div>
       </div>
       <div className="flex flex-col items-start">
+        <ImageGallery images={claudinaryImages} markdown={markdown} />
       </div>
     </div>
   )
