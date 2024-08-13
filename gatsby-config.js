@@ -25,12 +25,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `markdown`,
+        path: `${__dirname}/src/markdown/content`,
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    "gatsby-transformer-remark",
     {
       resolve: `gatsby-source-cloudinary`,
       options: {
