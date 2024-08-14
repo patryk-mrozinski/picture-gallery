@@ -13,14 +13,18 @@ const IndexPage = ({ data }) => {
 
   return (
     <div>
-      <div className="flex justify-between h-10 my-6">
-        <h1>
+      <div class="grid grid-cols-10 gap-4">
+        <div class="col-start-1">
           <b>
             {isSelectedLanguageEnglish ? "Picture Gallery" : "Galeria zdjec"}
           </b>
-        </h1>
-        <LanguageContextButton />
-        <Dropdown />
+        </div>
+        <div class="col-start-4 lg:col-start-9">
+          <LanguageContextButton />
+        </div>
+        <div class="col-start-8 lg:col-start-10">
+          <Dropdown />
+        </div>
       </div>
       <div className="flex flex-col items-start">
         <ImageGallery images={claudinaryImages} markdown={markdown} />
