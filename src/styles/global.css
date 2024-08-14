@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: fantasy;
+}
+
 .lg-react-element {
   display: flex;
   flex-direction: column;
@@ -11,7 +15,7 @@
   display: flex;
   flex-direction: column;
   width: 60%;
-  margin-bottom: 16px;
+  margin-bottom: 64px;
   overflow: hidden;
   box-shadow: 0 2px 4px #0000001a;
 }
