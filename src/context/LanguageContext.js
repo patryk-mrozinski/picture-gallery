@@ -13,13 +13,9 @@ export const LanguageProvider = ({ children }) => {
   const selectedLanguage = value
   const isSelectedLanguageEnglish = selectedLanguage === LANGUAGE.English
 
-  const toggleLanguage = () => {
-    setValue(prev =>
-      prev === LANGUAGE.English ? LANGUAGE.Polish : LANGUAGE.English
-    )
-  }
+  const switchLanguage = language => setValue(language)
 
-  const switchLnaguageTitle = value === LANGUAGE.English ? "Polski" : "English"
+  const switchLnaguageTitle = value === LANGUAGE.English ? "English" : "Polski"
 
   return (
     <LanguageContext.Provider
@@ -28,7 +24,7 @@ export const LanguageProvider = ({ children }) => {
         selectedLanguage,
         isSelectedLanguageEnglish,
         switchLnaguageTitle,
-        toggleLanguage,
+        switchLanguage,
         setValue,
       }}
     >
