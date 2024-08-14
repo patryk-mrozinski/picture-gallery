@@ -2,6 +2,7 @@
 language: "eng"
 type: "collection"
 title: "image descriptions"
+about: "This is text about me"
 items:
   - imageTitle: "lampiony"
     title: "Nice lampions"

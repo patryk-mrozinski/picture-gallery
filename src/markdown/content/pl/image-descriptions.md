@@ -2,6 +2,7 @@
 language: "pl"
 type: "collection"
 title: "image descriptions"
+about: "To jest tekst o mnie"
 items:
   - imageTitle: "lampiony"
     title: "Ladne lampiony"

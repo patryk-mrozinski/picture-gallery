@@ -10,8 +10,8 @@ import lgThumbnail from "lightgallery/plugins/thumbnail"
 const ImageGallery = props => {
   const images = props.images
   const markdownData = props.markdown.edges
-  const languageValue = useContext(LanguageContext).value
-  const filterLanguage = markdownData.find(
+  const { value: languageValue } = useContext(LanguageContext)
+  const filterMarkdownLanguage = markdownData.find(
     data => data.node.frontmatter.language === languageValue
   )
 
@@ -25,9 +25,10 @@ const ImageGallery = props => {
     >
       {images.map((image, index) => {
         const imageTitle = image.secure_url.match(/\/([^\/?]+)\?/)[1]
-        const translatedData = filterLanguage.node.frontmatter.items.find(
-          data => data.imageTitle === imageTitle
-        )
+        const translatedData =
+          filterMarkdownLanguage.node.frontmatter.items.find(
+            data => data.imageTitle === imageTitle
+          )
 
         return (
           <div key={index} className="image-preview-wrapper">
@@ -35,12 +36,12 @@ const ImageGallery = props => {
               href={image.secure_url}
               className="image-preview-link"
               data-src={image.secure_url}
-              data-sub-html={translatedData.description}
+              data-sub-html={`${translatedData.title}: ${translatedData.description}`}
             >
               <img
                 className="object-cover w-full h-full cursor-pointer"
                 src={image.secure_url}
-                alt={translatedData?.description || ""}
+                alt={translatedData?.title || ""}
               />
             </a>
             <p>{translatedData?.title || ""}</p>
