@@ -6,6 +6,10 @@ body {
   font-family: fantasy;
 }
 
+.lg-sub-html {
+  font-family: fantasy;
+}
+
 .lg-react-element {
   display: flex;
   flex-direction: column;
@@ -14,14 +18,15 @@ body {
 .image-preview-wrapper {
   display: flex;
   flex-direction: column;
-  width: 60%;
-  margin-bottom: 64px;
+  width: 55%;
+  margin-bottom: 32px;
   overflow: hidden;
   box-shadow: 0 2px 4px #0000001a;
 }
 
 .image-preview-wrapper p {
-  background-color: antiquewhite;
+  background-color: rgb(39 103 73);
+  color: aliceblue;
   padding: 4px;
 }
 
