@@ -26,7 +26,7 @@ body {
 
 .image-preview-wrapper p {
   background-color: rgb(39 103 73);
-  color: aliceblue;
+  color: gold;
   padding: 4px;
 }
 
@@ -42,4 +42,12 @@ body {
 
 .image-preview-wrapper:nth-child(even) {
   align-self: end;
+}
+
+.navigation-bar-wrapper {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  margin-bottom: 15px;
+  background-color: rgb(39 103 73);
+  color: gold;
 }
