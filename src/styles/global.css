@@ -2,20 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-.image-wrapper {
-  overflow: hidden;
-  box-shadow: 0 2px 4px #0000001a;
-  width: 70%;
-  margin-bottom: 48px;
+body {
+  font-family: fantasy;
 }
 
-.image-wrapper:nth-child(odd) {
+.lg-sub-html {
+  font-family: fantasy;
+}
+
+.lg-react-element {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-preview-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  margin-bottom: 32px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px #0000001a;
+}
+
+.image-preview-wrapper p {
+  background-color: rgb(39 103 73);
+  color: aliceblue;
+  padding: 4px;
+}
+
+.image-preview-wrapper:nth-child(odd) {
   border-top-right-radius: 18px;
   border-bottom-right-radius: 18px;
 }
 
-.image-wrapper:nth-child(even) {
+.image-preview-wrapper:nth-child(even) {
   border-top-left-radius: 18px;
   border-bottom-left-radius: 18px;
+}
+
+.image-preview-wrapper:nth-child(even) {
   align-self: end;
 }

@@ -1,28 +1,33 @@
-import React from "react"
-import { graphql, Link } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+import React, { useContext } from "react"
+import { graphql } from "gatsby"
+
+import ImageGallery from "../components/image-gallery"
+import { LanguageContext } from "../context/LanguageContext"
+import LanguageContextButton from "../components/language-context-button"
+import Dropdown from "../components/dropdown"
 
 const IndexPage = ({ data }) => {
+  const markdown = data.allMarkdownRemark
+  const claudinaryImages = data.allCloudinaryMedia.nodes
+  const { isSelectedLanguageEnglish } = useContext(LanguageContext)
+
   return (
     <div>
-      <div className="flex justify-between h-10 my-6">
-        <h1>
-          <b>Picture Gallery</b>
-        </h1>
-        <div className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-          <Link to="/images-page">More pictures</Link>
+      <div class="grid grid-cols-10 gap-4">
+        <div class="col-start-1">
+          <b>
+            {isSelectedLanguageEnglish ? "Picture Gallery" : "Galeria zdjec"}
+          </b>
+        </div>
+        <div class="col-start-4 lg:col-start-9">
+          <LanguageContextButton />
+        </div>
+        <div class="col-start-8 lg:col-start-10">
+          <Dropdown />
         </div>
       </div>
       <div className="flex flex-col items-start">
-        {data.allFile.nodes.map(node => (
-          <div className="image-wrapper" key={node.id}>
-            <GatsbyImage
-              className="object-cover w-full h-full"
-              image={node.childImageSharp.gatsbyImageData}
-              alt={node.name}
-            />
-          </div>
-        ))}
+        <ImageGallery images={claudinaryImages} markdown={markdown} />
       </div>
     </div>
   )
@@ -30,13 +35,23 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query {
-    allFile(filter: { sourceInstanceName: { eq: "images" } }) {
-      nodes {
-        id
-        name
-        childImageSharp {
-          gatsbyImageData
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            language
+            items {
+              imageTitle
+              title
+              description
+            }
+          }
         }
+      }
+    }
+    allCloudinaryMedia {
+      nodes {
+        secure_url
       }
     }
   }
