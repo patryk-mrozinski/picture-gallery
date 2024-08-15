@@ -11,6 +11,11 @@ const ImageGallery = props => {
   const images = props.images
   const markdownData = props.markdown.edges
   const { value: languageValue } = useContext(LanguageContext)
+
+  if (!markdownData) {
+    return <div>Loading...</div>
+  }
+
   const filterMarkdownLanguage = markdownData.find(
     data => data.node.frontmatter.language === languageValue
   )
@@ -25,6 +30,9 @@ const ImageGallery = props => {
     >
       {images.map((image, index) => {
         const imageTitle = image.secure_url.match(/\/([^\/?]+)\?/)[1]
+        if (!filterMarkdownLanguage) {
+          return <div>Loading...</div>
+        }
         const translatedData =
           filterMarkdownLanguage.node.frontmatter.items.find(
             data => data.imageTitle === imageTitle
@@ -41,10 +49,10 @@ const ImageGallery = props => {
               <img
                 className="object-cover w-full h-full cursor-pointer"
                 src={image.secure_url}
-                alt={translatedData?.title || ""}
+                alt={translatedData.title || ""}
               />
             </a>
-            <p>{translatedData?.title || ""}</p>
+            <p>{translatedData.title || ""}</p>
           </div>
         )
       })}

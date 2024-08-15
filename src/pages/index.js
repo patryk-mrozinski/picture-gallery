@@ -13,16 +13,16 @@ const IndexPage = ({ data }) => {
 
   return (
     <div>
-      <div class="grid grid-cols-10 gap-4">
-        <div class="col-start-1">
+      <div className="grid grid-cols-10 gap-4">
+        <div className="col-start-1">
           <b>
             {isSelectedLanguageEnglish ? "Picture Gallery" : "Galeria zdjec"}
           </b>
         </div>
-        <div class="col-start-4 lg:col-start-9">
+        <div className="col-start-4 lg:col-start-9">
           <LanguageContextButton />
         </div>
-        <div class="col-start-8 lg:col-start-10">
+        <div className="col-start-8 lg:col-start-10">
           <Dropdown />
         </div>
       </div>
