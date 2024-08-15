@@ -13,16 +13,20 @@ const About = ({ data }) => {
     data => data.node.frontmatter.language === selectedLanguage
   )
 
+  if (!aboutText) {
+    return <div>Loading...</div>
+  }
+
   return (
     <div>
-      <div class="grid grid-cols-10">
+      <div className="grid grid-cols-10">
         <Link
           className="col-start-1 col-span-3 lg:col-span-1 border-2 border-green-800 text-gray-900 py-2 px-4 rounded"
           to="/"
         >
           {isSelectedLanguageEnglish ? "Back to gallery" : "Wroc do galerii"}
         </Link>
-        <div class="col-start-6 lg:col-start-10">
+        <div className="col-start-6 lg:col-start-10">
           <LanguageContextButton />
         </div>
       </div>
