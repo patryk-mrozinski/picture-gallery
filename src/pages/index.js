@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <div>
-      <div className="grid grid-cols-10 gap-4">
+      <div className="grid grid-cols-10 gap-4 navigation-bar-wrapper">
         <div className="col-start-1">
           <b>
             {isSelectedLanguageEnglish ? "Picture Gallery" : "Galeria zdjec"}

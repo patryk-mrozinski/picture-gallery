@@ -19,9 +19,9 @@ const About = ({ data }) => {
 
   return (
     <div>
-      <div className="grid grid-cols-10">
+      <div className="grid grid-cols-10 navigation-bar-wrapper">
         <Link
-          className="col-start-1 col-span-3 lg:col-span-1 border-2 border-green-800 text-gray-900 py-2 px-4 rounded"
+          className="col-start-1 col-span-3 lg:col-span-1 border-2 border-green-800 text-gray-900 py-2 px-4 rounded text-[#ffd700]"
           to="/"
         >
           {isSelectedLanguageEnglish ? "Back to gallery" : "Wroc do galerii"}
