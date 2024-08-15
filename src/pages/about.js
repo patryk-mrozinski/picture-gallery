@@ -17,12 +17,12 @@ const About = ({ data }) => {
     <div>
       <div class="grid grid-cols-10">
         <Link
-          className="col-start-1 col-span-3 lg:col-span-1 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+          className="col-start-1 col-span-3 lg:col-span-1 border-2 border-green-800 text-gray-900 py-2 px-4 rounded"
           to="/"
         >
-          {isSelectedLanguageEnglish ? "Go back to gallery" : "Wroc do galerii"}
+          {isSelectedLanguageEnglish ? "Back to gallery" : "Wroc do galerii"}
         </Link>
-        <div class="col-start-6 lg:col-start-9">
+        <div class="col-start-6 lg:col-start-10">
           <LanguageContextButton />
         </div>
       </div>
