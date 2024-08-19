@@ -2,19 +2,31 @@
 language: "eng"
 type: "collection"
 title: "image descriptions"
-about: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc"
+about: "I have a profound passion for capturing the beauty of nature and landscapes. My lens doesn't stop there; I'm equally drawn to ancient structures, churches, and tombs that echo tales of bygone eras. However, it's the rustic charm of the old countryside that holds a special place in my heart. Sun-kissed fields, quaint old cottages, small chapels, trees bursting into spring bloom, the intoxicating scent of lilacs, and tranquil ponds nestled beneath weeping willows. Words may fall short, but I aim to encapsulate this essence in my photographs. If you wish to infuse your home or office with a touch of this ambiance, I invite you to explore and purchase my work."
 items:
-  - imageTitle: "lampiony"
-    title: "Nice lampions"
-    description: "Very nice lampions, picture done in Singapore"
+  - imageTitle: "old-cottage-in-the-woods"
+    title: "Old cottage in the woods"
+    description: ""
 
-  - imageTitle: "lampiony-2"
-    title: "Nice lampions 2"
-    description: "The same picture. Very nice lampions, picture done in Singapore"
+  - imageTitle: "old-large-church"
+    title: "Church"
+    description: "Old large church behind a spreading tree"
 
-  - imageTitle: "stejtek"
-    title: "Marina Bay"
-    description: "Done in Singapore, Marina Bay"
+  - imageTitle: "rural-landscape"
+    title: "Rural landscape"
+    description: "idyllic atmosphere"
+
+  - imageTitle: "autumn-in-Wales"
+    title: "Autumn in Wales"
+    description: "sun terrace, view of the landscape"
+
+  - imageTitle: "spring-countryside-landscape"
+    title: "Spring countryside landscape"
+    description: "stone bench under a tree"
+
+  - imageTitle: "beautiful-scarecrow"
+    title: "Beautiful scarecrow"
+    description: ""
 
   - imageTitle: "stejtek-2"
     title: "Marina Bay 2"
@@ -31,4 +43,8 @@ items:
   - imageTitle: "view"
     title: "View"
     description: "Nice view somewhere in Thailand"
+
+  - imageTitle: "tree-branches"
+    title: "Tree branches over a misty pond"
+    description: "Tree branches over a misty pond, in a pond of ducks and geese. England"
 ---
