@@ -14,7 +14,7 @@ const LanguageContextButton = () => {
     <div>
       <Menu as="div" className="relative inline-block text-center">
         <div>
-          <MenuButton className="border-solid border-2 border-green-800 inline-flex w-full justify-center rounded-md bg-white px-6 py-2 text-gray-900 hover:bg-gray-50">
+          <MenuButton className="menu-nav-button inline-flex w-full justify-center rounded-md px-6 py-2 hover:bg-gray-50">
             <span
               className={`fi fis fi-${isSelectedLanguageEnglish ? "us" : "pl"}`}
             />

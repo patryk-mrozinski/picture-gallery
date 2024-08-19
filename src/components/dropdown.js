@@ -9,7 +9,7 @@ const Dropdown = () => {
   return (
     <Menu as="div" className="relative inline-block text-center">
       <div>
-        <MenuButton className="border-solid border-2 border-green-800 inline-flex w-full justify-center rounded-md bg-white px-6 py-2 text-gray-900 shadow-sm ring-1 ring-inset hover:bg-gray-50">
+        <MenuButton className="menu-nav-button inline-flex w-full justify-center rounded-md px-6 py-2 shadow-sm ring-1 ring-inset hover:bg-gray-50">
           {isSelectedLanguageEnglish ? "More" : "Wiecej"}
           <ChevronDownIcon
             aria-hidden="true"
