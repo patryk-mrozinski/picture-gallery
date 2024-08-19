@@ -14,8 +14,8 @@ const IndexPage = ({ data }) => {
   return (
     <div>
       <div className="grid grid-cols-10 gap-4 navigation-bar-wrapper">
-        <div className="col-start-1">
-          <b>
+        <div className="col-start-1 col-span-2">
+          <b className="text-2xl ml-2">
             {isSelectedLanguageEnglish ? "Picture Gallery" : "Galeria zdjec"}
           </b>
         </div>

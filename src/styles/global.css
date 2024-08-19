@@ -6,6 +6,14 @@ body {
   font-family: fantasy;
 }
 
+.menu-nav-button {
+  background-color: rgb(39 103 73);
+  border-style: solid;
+  border-color: gold;
+  color: gold;
+  border-width: 1px;
+}
+
 .lg-sub-html {
   font-family: fantasy;
 }

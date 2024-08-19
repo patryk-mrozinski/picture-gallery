@@ -44,15 +44,15 @@ const ImageGallery = props => {
               href={image.secure_url}
               className="image-preview-link"
               data-src={image.secure_url}
-              data-sub-html={`${translatedData.title}: ${translatedData.description}`}
+              data-sub-html={`${translatedData?.title}: ${translatedData?.description}`}
             >
               <img
                 className="object-cover w-full h-full cursor-pointer"
                 src={image.secure_url}
-                alt={translatedData.title || ""}
+                alt={translatedData?.title || ""}
               />
             </a>
-            <p>{translatedData.title || ""}</p>
+            <p>{translatedData?.title || ""}</p>
           </div>
         )
       })}

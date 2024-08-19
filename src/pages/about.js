@@ -21,7 +21,7 @@ const About = ({ data }) => {
     <div>
       <div className="grid grid-cols-10 navigation-bar-wrapper">
         <Link
-          className="col-start-1 col-span-3 lg:col-span-1 border-2 border-green-800 text-[#ffd700] py-2 px-4 rounded"
+          className="menu-nav-button ml-2 col-start-1 col-span-3 lg:col-span-1 py-2 px-4 rounded"
           to="/"
         >
           {isSelectedLanguageEnglish ? "Back to gallery" : "Wroc do galerii"}
@@ -33,7 +33,7 @@ const About = ({ data }) => {
 
       <div className="relative h-screen mx-2 my-4">
         <StaticImage
-          src="../markdown/images/DSC06526.JPG"
+          src="../markdown/images/Stone bench under a tree.jpg"
           alt="Background"
           layout="fullWidth"
           className="absolute inset-0 w-full h-screen object-cover rounded-lg"
@@ -41,7 +41,7 @@ const About = ({ data }) => {
 
         <div className="absolute inset-0 overflow-y-scroll content-center">
           <div className="w-full p-4 text-white flex items-center justify-center">
-            <p className="">{aboutText.node.frontmatter.about}</p>
+            <p>{aboutText.node.frontmatter.about}</p>
           </div>
         </div>
       </div>
